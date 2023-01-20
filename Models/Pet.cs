@@ -49,7 +49,9 @@ namespace pet_hotel
         [JsonConverter(typeof(JsonStringEnumConverter))]
         public PetColorType color {get; set;}
 
-        public DateTime checkedInAt {get; set;}
+
+        // "?" after Class Declaration means it is optional (affects both DB and local model)
+        public DateTime? checkedInAt {get; set;}
     
         [ForeignKey("petOwner")]
         public int petOwnerId {get; set;}
